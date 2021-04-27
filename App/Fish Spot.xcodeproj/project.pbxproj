@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2B81B122619DF9200DD4EDC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B81B112619DF9200DD4EDC /* ImagePicker.swift */; };
 		C2EC2E522616CF6000136888 /* Fish_SpotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC2E512616CF6000136888 /* Fish_SpotApp.swift */; };
 		C2EC2E542616CF6000136888 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC2E532616CF6000136888 /* ContentView.swift */; };
 		C2EC2E562616CF6300136888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2EC2E552616CF6300136888 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2B81B112619DF9200DD4EDC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		C2EC2E4E2616CF6000136888 /* Fish Spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fish Spot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EC2E512616CF6000136888 /* Fish_SpotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish_SpotApp.swift; sourceTree = "<group>"; };
 		C2EC2E532616CF6000136888 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		C2EC2E702616D61200136888 /* Page View */ = {
 			isa = PBXGroup;
 			children = (
+				C2B81B112619DF9200DD4EDC /* ImagePicker.swift */,
 				C2EC2E722616D67B00136888 /* Fish Views */,
 				C2EC2E532616CF6000136888 /* ContentView.swift */,
 				C2EC2E612616D5C000136888 /* CameraView.swift */,
@@ -190,6 +193,7 @@
 				C2EC2E812616D6D700136888 /* BreamView.swift in Sources */,
 				C2EC2E842616D6E600136888 /* SnapperView.swift in Sources */,
 				C2EC2E682616D5DE00136888 /* WeatherView.swift in Sources */,
+				C2B81B122619DF9200DD4EDC /* ImagePicker.swift in Sources */,
 				C2EC2E782616D6A300136888 /* FlounderView.swift in Sources */,
 				C2EC2E742616D69000136888 /* FlatheadView.swift in Sources */,
 				C2EC2E7E2616D6C400136888 /* TunaView.swift in Sources */,
