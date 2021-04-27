@@ -18,7 +18,7 @@ struct ContentView: View {
                     Spacer()
                     Spacer()
                     VStack(spacing: 0){
-                        NavigationLink(destination: CameraView().navigationBarBackButtonHidden(true).navigationBarHidden(true).aspectRatio(contentMode: .fit)){
+                        NavigationLink(destination: CameraView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                             ZStack{
                                 Rectangle().fill(Color("homebutton")).frame(width: 340, height: 70).opacity(0.8).cornerRadius(15).aspectRatio(contentMode: .fit).padding(.bottom)
                                 HStack{
@@ -28,7 +28,7 @@ struct ContentView: View {
                             }
                         }
                         HStack{
-                            NavigationLink(destination: CollectionView().navigationBarBackButtonHidden(true).navigationBarHidden(true).aspectRatio(contentMode: .fit)){
+                            NavigationLink(destination: CollectionView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                 ZStack{
                                     Rectangle().fill(Color("homebutton")).frame(width: 170, height: 70).opacity(0.8).cornerRadius(15).aspectRatio(contentMode: .fit).padding([.leading, .bottom])
                                     HStack(spacing: 1){
@@ -37,7 +37,7 @@ struct ContentView: View {
                                     }
                                 }
                             }
-                            NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true).aspectRatio(contentMode: .fit)){
+                            NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                 ZStack{
                                     Rectangle().fill(Color("homebutton")).frame(width: 170, height: 70).opacity(0.8).cornerRadius(15).aspectRatio(contentMode: .fit).padding([.bottom, .trailing])
                                     HStack(spacing: 0){
@@ -50,7 +50,7 @@ struct ContentView: View {
                        
                        
                         HStack{
-                            NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true).aspectRatio(contentMode: .fit)){
+                            NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                 ZStack{
                                     Rectangle().fill(Color("homebutton")).frame(width: 170, height: 70).opacity(0.8).cornerRadius(15).aspectRatio(contentMode: .fit).padding([.leading, .bottom])
                                     HStack(spacing: 1){
@@ -59,7 +59,7 @@ struct ContentView: View {
                                     }
                                 }
                             }
-                            NavigationLink(destination: FishingspotView().navigationBarBackButtonHidden(true).navigationBarHidden(true).aspectRatio(contentMode: .fit)){
+                            NavigationLink(destination: FishingspotView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                 ZStack{
                                     Rectangle().fill(Color("homebutton")).frame(width: 170, height: 70).opacity(0.8).cornerRadius(15).aspectRatio(contentMode: .fit).padding([.bottom, .trailing])
                                     HStack{

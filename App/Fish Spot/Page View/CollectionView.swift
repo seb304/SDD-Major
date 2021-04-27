@@ -15,7 +15,7 @@ struct CollectionView: View {
                 Text("Collection")
                     .font(.title)
                     .fontWeight(.bold)
-                    .padding(.vertical).offset(y: -0).opacity(1)
+                    .padding(.vertical).offset(y: -0).opacity(1).foregroundColor(Color.black)
                 Spacer(minLength: 40)
                 HStack(){
                     NavigationLink(destination: BreamView()){
@@ -42,7 +42,7 @@ struct CollectionView: View {
                 }
                 Spacer(minLength: 40)
                 HStack(){
-                    NavigationLink(destination: BreamView()){
+                    NavigationLink(destination: FlounderView()){
                         ZStack{
                             Ellipse().fill(Color.white).frame(width: 170, height: 120).opacity(0.5).aspectRatio(contentMode: .fit).padding(.leading)
                             VStack{
@@ -53,7 +53,7 @@ struct CollectionView: View {
                             }
                         }
                     }
-                    NavigationLink(destination: FlatheadView()){
+                    NavigationLink(destination: KingfishView()){
                         ZStack{
                             Ellipse().fill(Color.white).frame(width: 170, height: 120).opacity(0.5).aspectRatio(contentMode: .fit).offset(x: 0).padding(.trailing)
                             VStack{
@@ -66,7 +66,7 @@ struct CollectionView: View {
                 }
                 Spacer(minLength: 40)
                 HStack(){
-                    NavigationLink(destination: BreamView()){
+                    NavigationLink(destination: SnapperView()){
                         ZStack{
                             Ellipse().fill(Color.white).frame(width: 170, height: 120).opacity(0.5).aspectRatio(contentMode: .fit).padding(.leading)
                             VStack{
@@ -79,7 +79,7 @@ struct CollectionView: View {
                             }
                         }
                     }
-                    NavigationLink(destination: FlatheadView()){
+                    NavigationLink(destination: TunaView()){
                         ZStack{
                             Ellipse().fill(Color.white).frame(width: 170, height: 120).opacity(0.5).aspectRatio(contentMode: .fit).offset(x: 0).padding(.trailing)
                             VStack{
@@ -119,7 +119,7 @@ struct CollectionView: View {
                             NavigationLink(destination: FishingspotView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                 Image("map").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                             }
-                            Spacer(minLength: 30)
+                            Spacer(minLength: 25)
                         }
                     }
                 }
