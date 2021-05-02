@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C246E0C8263CD5C2008BF878 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C246E0C7263CD5C2008BF878 /* WeatherData.swift */; };
+		C246E0CB263CD8E5008BF878 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C246E0CA263CD8E5008BF878 /* APICall.swift */; };
 		C289D67C263544EC0083CF16 /* BrightonMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289D67B263544EC0083CF16 /* BrightonMapView.swift */; };
 		C289D684263557800083CF16 /* GordanMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289D683263557800083CF16 /* GordanMapView.swift */; };
 		C289D687263557890083CF16 /* HarbourMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289D686263557890083CF16 /* HarbourMapView.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C246E0C7263CD5C2008BF878 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		C246E0CA263CD8E5008BF878 /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		C289D67B263544EC0083CF16 /* BrightonMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightonMapView.swift; sourceTree = "<group>"; };
 		C289D683263557800083CF16 /* GordanMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GordanMapView.swift; sourceTree = "<group>"; };
 		C289D686263557890083CF16 /* HarbourMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourMapView.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				C2EC2E612616D5C000136888 /* CameraView.swift */,
 				C2EC2E642616D5CE00136888 /* CollectionView.swift */,
 				C2EC2E672616D5DE00136888 /* WeatherView.swift */,
+				C246E0C7263CD5C2008BF878 /* WeatherData.swift */,
+				C246E0CA263CD8E5008BF878 /* APICall.swift */,
 				C2EC2E6A2616D5EC00136888 /* LawView.swift */,
 				C2EC2E6D2616D5F900136888 /* FishingspotView.swift */,
 			);
@@ -274,11 +280,13 @@
 				C2B64F242629857B00E1C17F /* GordanView.swift in Sources */,
 				C2EC2E842616D6E600136888 /* SnapperView.swift in Sources */,
 				C2EC2E682616D5DE00136888 /* WeatherView.swift in Sources */,
+				C246E0C8263CD5C2008BF878 /* WeatherData.swift in Sources */,
 				C289D67C263544EC0083CF16 /* BrightonMapView.swift in Sources */,
 				C2B81B122619DF9200DD4EDC /* ImagePicker.swift in Sources */,
 				C289D68E263557A40083CF16 /* ParsleyMapView.swift in Sources */,
 				C2EC2E782616D6A300136888 /* FlounderView.swift in Sources */,
 				C2B64F2D2629889300E1C17F /* ParsleyView.swift in Sources */,
+				C246E0CB263CD8E5008BF878 /* APICall.swift in Sources */,
 				C289D684263557800083CF16 /* GordanMapView.swift in Sources */,
 				C2EC2E742616D69000136888 /* FlatheadView.swift in Sources */,
 				C2EC2E7E2616D6C400136888 /* TunaView.swift in Sources */,

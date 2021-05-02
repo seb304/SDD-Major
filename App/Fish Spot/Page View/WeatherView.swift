@@ -13,123 +13,57 @@ struct WeatherView: View {
             ZStack { // arranges contents in the z-axis
                 Image("background").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea()
                 
+                
                 VStack{
-                    Text("Top Fishing Spots").font(.title2).fontWeight(.bold).foregroundColor(Color.black).padding()
-                    NavigationLink(destination: BrightonView()){
+                    
+                    ZStack{
+                        Rectangle().fill(Color.white).cornerRadius(40).opacity(0.6).frame(width: 320, height: 150)
+                    }
+                    
+                    HStack{
                         ZStack{
-                            Rectangle().fill(Color.white).cornerRadius(20).opacity(0.7).frame(width: 370, height: 100)
-                            HStack{
-                                Image("Brighton").resizable().aspectRatio(contentMode: .fit).padding(.horizontal).frame(width: 140, height: 100)
-                                VStack{
-                                    Text("Cooks River")
-                                        .font(.title3)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(Color.black)
-                                        .multilineTextAlignment(.leading)
-                                    Text("Brighton-Le-Sands")
-                                        .font(.body).foregroundColor(Color.black).padding(.trailing)
-                                }
-                                Text(">")
-                                    .font(.title)
-                                    .foregroundColor(Color.black)
-                                    .padding(.horizontal)
-                            }
+                            Rectangle().fill(Color.white).cornerRadius(40).opacity(0.6).frame(width: 160, height: 150)
+                        }
+                        ZStack{
+                            Rectangle().fill(Color.white).cornerRadius(40).opacity(0.6).frame(width: 160, height: 150)
                         }
                     }
-                    NavigationLink(destination: GordanView()){
+                    HStack{
                         ZStack{
-                            Rectangle().fill(Color.white).cornerRadius(20).opacity(0.7).frame(width: 370, height: 100)
-                            HStack{
-                                Image("Gordan").resizable().aspectRatio(contentMode: .fit).padding(.trailing).frame(width: 140, height: 100)
-                                VStack{
-                                    Text("Gordan's Bay")
-                                        .font(.title3)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(Color.black)
-                                        .multilineTextAlignment(.leading)
-                                    Text("Clovelly")
-                                        .font(.body).foregroundColor(Color.black).padding(.trailing)
-                                }
-                                Text(">")
-                                    .font(.title)
-                                    .foregroundColor(Color.black)
-                                    .padding(.horizontal)
-                            }
+                            Rectangle().fill(Color.white).cornerRadius(40).opacity(0.6).frame(width: 160, height: 150)
+                        }
+                        ZStack{
+                            Rectangle().fill(Color.white).cornerRadius(40).opacity(0.6).frame(width: 160, height: 150)
                         }
                     }
-                    NavigationLink(destination: HarbourView()){
-                        ZStack{
-                            Rectangle().fill(Color.white).cornerRadius(20).opacity(0.7).frame(width: 370, height: 100)
-                            HStack{
-                                Image("Harbour").resizable().aspectRatio(contentMode: .fit).padding(.leading).frame(width: 140, height: 100)
-                                VStack{
-                                    Text("Beulah St Wharf")
-                                        .font(.title3)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(Color.black)
-                                        .multilineTextAlignment(.leading)
-                                    Text("Sydney Harbour")
-                                        .font(.body).foregroundColor(Color.black).padding(.trailing)
+                    
+                    
+                    ZStack{
+                        Rectangle().fill(Color.blue).cornerRadius(40).offset(y: 35).frame(height: 150).padding(.top).opacity(0.5).ignoresSafeArea()
+                        VStack(spacing: 40){
+                            HStack(spacing: 10){
+                                Spacer()
+                                NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                    Image("home").resizable().aspectRatio(contentMode: .fit).frame(width: 50, height: 60).padding(.top)
                                 }
-                                Text(">")
-                                    .font(.title)
-                                    .foregroundColor(Color.black)
-                                    .padding(.horizontal)
-                            }
-                        }
-                    }
-                    NavigationLink(destination: GymeaView()){
-                        ZStack{
-                            Rectangle().fill(Color.white).cornerRadius(20).opacity(0.7).frame(width: 370, height: 100)
-                            HStack{
-                                Image("Gymea").resizable().aspectRatio(contentMode: .fit).padding(.trailing).frame(width: 140, height: 100)
-                                VStack{
-                                    Text("Gymea Baths")
-                                        .font(.title3)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(Color.black)
-                                        .multilineTextAlignment(.leading)
-                                    Text("Gymea Bay")
-                                        .font(.body).foregroundColor(Color.black).padding(.trailing)
+                                NavigationLink(destination: CameraView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                    Image("camera").resizable().aspectRatio(contentMode: .fit).frame(width: 50, height: 60).padding(.top)
                                 }
-                                Text(">")
-                                    .font(.title)
-                                    .foregroundColor(Color.black)
-                                    .padding(.horizontal)
-                            }
-                        }
-                    }
-                    NavigationLink(destination: ParsleyView()){
-                        ZStack{
-                            Rectangle().fill(Color.white).cornerRadius(20).opacity(0.7).frame(width: 370, height: 100)
-                            HStack{
-                                Image("Parsley").resizable().aspectRatio(contentMode: .fit).padding(.trailing).frame(width: 140, height: 100)
-                                VStack{
-                                    Text("Parsley Bay")
-                                        .font(.title3)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(Color.black)
-                                        .multilineTextAlignment(.leading)
-                                    Text("Vaucluse")
-                                        .font(.body).foregroundColor(Color.black).padding(.trailing)
+                                NavigationLink(destination: CollectionView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                    Image("collection").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
-                                Text(">")
-                                    .font(.title)
-                                    .foregroundColor(Color.black)
-                                    .padding(.horizontal)
+                                NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                    Image("weather").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
+                                }
+                                NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                    Image("law").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
+                                }
+                                VStack{
+                                    Image("map").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top).offset(y: 14)
+                                    Circle().fill(Color.green).frame(width: 20, height: 20).opacity(0.3).offset(y: 10)
+                                }
+                                Spacer(minLength: 20)
                             }
-                        }
-                    }
-                    Spacer(minLength: 30)
-                    Spacer()
-                        .toolbar {
-                    ToolbarItemGroup(placement: .bottomBar) {
-                        NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
-                            Image("home").resizable().aspectRatio(contentMode: .fit).frame(width: 50, height: 60).padding(.top)
-                        }
-
-                        Button("Second") {
-                            print("Pressed")
                         }
                     }
                 }
@@ -143,4 +77,4 @@ struct WeatherView_Previews: PreviewProvider {
         WeatherView()
     }
 }
-}
+
