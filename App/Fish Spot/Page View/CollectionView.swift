@@ -18,7 +18,7 @@ struct CollectionView: View {
                     .padding(.vertical).offset(y: -0).opacity(1).foregroundColor(Color.black)
                 Spacer(minLength: 40)
                 HStack(){
-                    NavigationLink(destination: BreamView()){
+                    NavigationLink(destination: BreamView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                         ZStack{
                             Ellipse().fill(Color.white).frame(width: 170, height: 120).opacity(0.5).aspectRatio(contentMode: .fit).padding(.leading)
                             VStack{
@@ -29,7 +29,7 @@ struct CollectionView: View {
                             }
                         }
                     }
-                    NavigationLink(destination: FlatheadView()){
+                    NavigationLink(destination: FlatheadView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                         ZStack{
                             Ellipse().fill(Color.white).frame(width: 170, height: 120).opacity(0.5).aspectRatio(contentMode: .fit).offset(x: 0).padding(.trailing)
                             VStack{
@@ -42,7 +42,7 @@ struct CollectionView: View {
                 }
                 Spacer(minLength: 40)
                 HStack(){
-                    NavigationLink(destination: FlounderView()){
+                    NavigationLink(destination: FlounderView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                         ZStack{
                             Ellipse().fill(Color.white).frame(width: 170, height: 120).opacity(0.5).aspectRatio(contentMode: .fit).padding(.leading)
                             VStack{
@@ -53,7 +53,7 @@ struct CollectionView: View {
                             }
                         }
                     }
-                    NavigationLink(destination: KingfishView()){
+                    NavigationLink(destination: KingfishView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                         ZStack{
                             Ellipse().fill(Color.white).frame(width: 170, height: 120).opacity(0.5).aspectRatio(contentMode: .fit).offset(x: 0).padding(.trailing)
                             VStack{
@@ -66,7 +66,7 @@ struct CollectionView: View {
                 }
                 Spacer(minLength: 40)
                 HStack(){
-                    NavigationLink(destination: SnapperView()){
+                    NavigationLink(destination: SnapperView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                         ZStack{
                             Ellipse().fill(Color.white).frame(width: 170, height: 120).opacity(0.5).aspectRatio(contentMode: .fit).padding(.leading)
                             VStack{
@@ -79,7 +79,7 @@ struct CollectionView: View {
                             }
                         }
                     }
-                    NavigationLink(destination: TunaView()){
+                    NavigationLink(destination: TunaView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                         ZStack{
                             Ellipse().fill(Color.white).frame(width: 170, height: 120).opacity(0.5).aspectRatio(contentMode: .fit).offset(x: 0).padding(.trailing)
                             VStack{

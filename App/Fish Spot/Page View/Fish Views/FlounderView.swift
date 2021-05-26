@@ -13,10 +13,13 @@ struct FlounderView: View {
             Image("background").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea()
             
             VStack{
-                Image("flounder").resizable().aspectRatio(contentMode: .fit).frame(width: 300, height: 140)
                 
+                Spacer()
+                
+                Image("flounder").resizable().aspectRatio(contentMode: .fit).frame(width: 300, height: 140)
+                Spacer()
                 ZStack{
-                    Rectangle().fill(Color.white).cornerRadius(40).frame(width: 350, height: 325).opacity(0.7)
+                    Rectangle().fill(Color.white).cornerRadius(40).frame(width: 350, height: 350).opacity(0.7)
                 }
                 Spacer(minLength: 20)
                 ZStack{

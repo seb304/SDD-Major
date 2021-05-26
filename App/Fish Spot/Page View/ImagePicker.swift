@@ -1,9 +1,3 @@
-//
-//  ImagePicker.swift
-//  Fish Spot
-//
-//  Created by Sebastian Baldwin on 4/4/21.
-//
 
 import Foundation
 import SwiftUI

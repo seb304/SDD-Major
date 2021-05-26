@@ -14,53 +14,53 @@ import Foundation
 struct CameraView: View {
     
     
-    @State private var showSheet: Bool = false // boolean value 
+    @State private var showSheet: Bool = false // show image upload options
     @State private var showImagePicker: Bool = false
     @State private var sourceType: UIImagePickerController.SourceType = .camera
     
-    @State private var image: UIImage? // image displayed on screen
+    @State private var image: UIImage? // image display
     
     
-    @State var bream = false
+    @State var bream = false       // displaying correct page for fish species
     @State var flathead = false
     @State var flounder = false
     @State var kingfish = false
     @State var tuna = false
     @State var snapper = false
     
-    @State var showLoad = false
+    @State var showLoad = false // loading circle
     
     var body: some View {
         
 
             
-            ZStack { // arranges contents in the z-axis
-                Image("background").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea() // background image
+            ZStack {
+                Image("background").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea()
                 
-                VStack{ // arranges contents in vertical order
+                VStack{
                     Spacer()
                     Spacer()
-                    Image(uiImage: image ?? UIImage(named:  "placehold")!).resizable().aspectRatio(contentMode: .fit).padding().offset(y: 30) // Placehold image which changes to users selected photo
+                    Image(uiImage: image ?? UIImage(named:  "placehold")!).resizable().aspectRatio(contentMode: .fit).padding().offset(y: 30) // Image updates to uploaded image
                     Spacer()
                     Spacer()
                     Spacer()
-                    Button("Take/Select Photo"){ // button to upload a photo either through their camera or photo library
+                    Button("Take/Select Photo"){ // Button: upload photo
                         self.showSheet = true
                     }.padding().offset(y: 70).foregroundColor(Color.white).background(Color("homebutton").opacity(0.6).cornerRadius(10.0).offset(y: 70)).actionSheet(isPresented: $showSheet) {
                         ActionSheet(title: Text("Select Photo"), message: Text("Choose"), buttons: [
                             .default(Text("Photo Library")) {
                                 self.showImagePicker = true
-                                self.sourceType = .photoLibrary // button which takes user to their photo library
+                                self.sourceType = .photoLibrary // select from photo library
                             },
                             .default(Text("Camera")) {
                                 self.showImagePicker = true
-                                self.sourceType = .camera //button which takes user to camera
+                                self.sourceType = .camera //select from phone camera
                             },
                             .cancel()
                         ])
                     }
                     
-                    Button("Verify"){ // upload users image to AI service (ximilar)
+                    Button("Verify"){ // upload photo to api
                         
                         if image != nil{
                             showLoad = true
@@ -99,8 +99,8 @@ struct CameraView: View {
                                    if let data = data {
                                         do {
                                             
-                                            let ximilar = try? JSONDecoder().decode(Welcome.self, from: data)
-                                            let condition = ximilar!.records.first?.bestLabel.name
+                                            let ximilar = try? JSONDecoder().decode(XimilarData.self, from: data)
+                                            let condition = ximilar!.records.first?.bestLabel.name // finds value of best_label and changes value based on that
                                             if condition == "Flounder"{
                                                 flounder = true
                                             } else if condition == "Flathead"{
@@ -159,7 +159,7 @@ struct CameraView: View {
                         }
                     }
                 }
-                if showLoad {
+                if showLoad {             // loads page depending on bool value
                     loadingCircleView()
                 }
             
@@ -197,6 +197,11 @@ struct CameraView_Previews: PreviewProvider {
             .previewDevice("iPhone 12")
     }
 }
+
+
+// views for different fish
+
+
 
 struct breamView: View {
     var body: some View {
@@ -496,6 +501,10 @@ struct tunaView: View {
     }
 }
 
+
+
+// view for loading bar while waiting for response
+
 struct loadingCircleView: View{
     
     @State var animate = false
@@ -508,7 +517,7 @@ struct loadingCircleView: View{
                 Rectangle().frame(width: 100, height: 100).foregroundColor(Color.white).cornerRadius(10).opacity(0.8)
                 VStack{
                     Circle().trim(from: 0, to: 0.8).stroke(AngularGradient(gradient: .init(colors: [.blue, .green]),center: .center),style: StrokeStyle(lineWidth: 8, lineCap: .round)).frame(width: 45, height: 45).rotationEffect(.init(degrees: self.animate ? 360:0)).animation(Animation.linear(duration: 0.7).repeatForever(autoreverses: false))
-                    Text("Loading...").foregroundColor(Color("homebutton"))
+                    Text("Loading...").foregroundColor(Color("homebutton")) // spinning circle
             }
             }.onAppear{
                 self.animate.toggle()

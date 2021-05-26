@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct WeatherView: View {
+    
+    
+    
     var body: some View {
         NavigationView {
             ZStack { // arranges contents in the z-axis
@@ -16,26 +20,30 @@ struct WeatherView: View {
                 
                 VStack{
                     
-                    ZStack{
-                        Rectangle().fill(Color.white).cornerRadius(40).opacity(0.6).frame(width: 320, height: 150)
-                    }
                     
-                    HStack{
-                        ZStack{
-                            Rectangle().fill(Color.white).cornerRadius(40).opacity(0.6).frame(width: 160, height: 150)
-                        }
-                        ZStack{
-                            Rectangle().fill(Color.white).cornerRadius(40).opacity(0.6).frame(width: 160, height: 150)
-                        }
+                    Button("Get weather"){
+                        
+                        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=Sydney&appid=09a8e488d576c1dab695df3b02b900dd")!
+                        
+                        var request = URLRequest(url: url)
+                        
+                        request.httpMethod = "GET"
+
+                        let session = URLSession.shared
+                        session.dataTask(with: request) { (data, response, error) in
+
+                            if let error = error {
+                                print(error)
+                            } else if let data = data {
+                                print(data)
+                            } else {
+                                print(".")
+                            }
+                        }.resume()
                     }
-                    HStack{
-                        ZStack{
-                            Rectangle().fill(Color.white).cornerRadius(40).opacity(0.6).frame(width: 160, height: 150)
-                        }
-                        ZStack{
-                            Rectangle().fill(Color.white).cornerRadius(40).opacity(0.6).frame(width: 160, height: 150)
-                        }
-                    }
+                        
+                        
+                    }.padding().offset(y: 70).foregroundColor(.white).background(Color("homebutton").opacity(0.6).cornerRadius(10.0).frame(width: 170).offset(y: 70))
                     
                     
                     ZStack{
@@ -70,7 +78,7 @@ struct WeatherView: View {
             }
         }
     }
-}
+
 
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {

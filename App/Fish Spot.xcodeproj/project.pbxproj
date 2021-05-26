@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C266F2532643B221000C1778 /* VerifyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C266F2522643B221000C1778 /* VerifyData.swift */; };
+		C20C30B6265A61110051771B /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C30B5265A61110051771B /* Loading.swift */; };
 		C289D67C263544EC0083CF16 /* BrightonMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289D67B263544EC0083CF16 /* BrightonMapView.swift */; };
 		C289D684263557800083CF16 /* GordanMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289D683263557800083CF16 /* GordanMapView.swift */; };
 		C289D687263557890083CF16 /* HarbourMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289D686263557890083CF16 /* HarbourMapView.swift */; };
@@ -19,11 +19,8 @@
 		C2B64F2A2629885A00E1C17F /* GymeaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B64F292629885A00E1C17F /* GymeaView.swift */; };
 		C2B64F2D2629889300E1C17F /* ParsleyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B64F2C2629889300E1C17F /* ParsleyView.swift */; };
 		C2B81B122619DF9200DD4EDC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B81B112619DF9200DD4EDC /* ImagePicker.swift */; };
+		C2C36BB1265DBC7900ABB67E /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C36BB0265DBC7900ABB67E /* WeatherData.swift */; };
 		C2C7DD6B264A2D9300B5D233 /* jsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7DD6A264A2D9300B5D233 /* jsonData.swift */; };
-		C2E037CA2644F3170091644A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E037C92644F3170091644A /* Location.swift */; };
-		C2E037CD2644F7400091644A /* mapCentre.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E037CC2644F7400091644A /* mapCentre.swift */; };
-		C2E7EDD026440B92009366BE /* BestLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7EDCF26440B92009366BE /* BestLabel.swift */; };
-		C2E7EDD72644C436009366BE /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7EDD62644C436009366BE /* Name.swift */; };
 		C2EC2E522616CF6000136888 /* Fish_SpotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC2E512616CF6000136888 /* Fish_SpotApp.swift */; };
 		C2EC2E542616CF6000136888 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC2E532616CF6000136888 /* ContentView.swift */; };
 		C2EC2E562616CF6300136888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2EC2E552616CF6300136888 /* Assets.xcassets */; };
@@ -42,7 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C266F2522643B221000C1778 /* VerifyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyData.swift; sourceTree = "<group>"; };
+		C20C30B5265A61110051771B /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		C289D67B263544EC0083CF16 /* BrightonMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightonMapView.swift; sourceTree = "<group>"; };
 		C289D683263557800083CF16 /* GordanMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GordanMapView.swift; sourceTree = "<group>"; };
 		C289D686263557890083CF16 /* HarbourMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourMapView.swift; sourceTree = "<group>"; };
@@ -54,11 +51,8 @@
 		C2B64F292629885A00E1C17F /* GymeaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymeaView.swift; sourceTree = "<group>"; };
 		C2B64F2C2629889300E1C17F /* ParsleyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsleyView.swift; sourceTree = "<group>"; };
 		C2B81B112619DF9200DD4EDC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C2C36BB0265DBC7900ABB67E /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		C2C7DD6A264A2D9300B5D233 /* jsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonData.swift; sourceTree = "<group>"; };
-		C2E037C92644F3170091644A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		C2E037CC2644F7400091644A /* mapCentre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapCentre.swift; sourceTree = "<group>"; };
-		C2E7EDCF26440B92009366BE /* BestLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestLabel.swift; sourceTree = "<group>"; };
-		C2E7EDD62644C436009366BE /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
 		C2EC2E4E2616CF6000136888 /* Fish Spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fish Spot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EC2E512616CF6000136888 /* Fish_SpotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish_SpotApp.swift; sourceTree = "<group>"; };
 		C2EC2E532616CF6000136888 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,7 +88,6 @@
 			children = (
 				C2B64F1B262983BF00E1C17F /* BrightonView.swift */,
 				C289D67B263544EC0083CF16 /* BrightonMapView.swift */,
-				C2E037CC2644F7400091644A /* mapCentre.swift */,
 			);
 			path = Brighton;
 			sourceTree = "<group>";
@@ -138,7 +131,6 @@
 		C2B64F1A262983A400E1C17F /* Fishing Spots */ = {
 			isa = PBXGroup;
 			children = (
-				C2E037C92644F3170091644A /* Location.swift */,
 				C289D67A263544CE0083CF16 /* Brighton */,
 				C289D67F263557530083CF16 /* Gordan */,
 				C289D6802635575B0083CF16 /* Harbour */,
@@ -190,12 +182,11 @@
 				C2B64F1A262983A400E1C17F /* Fishing Spots */,
 				C2B81B112619DF9200DD4EDC /* ImagePicker.swift */,
 				C2C7DD6A264A2D9300B5D233 /* jsonData.swift */,
-				C266F2522643B221000C1778 /* VerifyData.swift */,
-				C2E7EDCF26440B92009366BE /* BestLabel.swift */,
-				C2E7EDD62644C436009366BE /* Name.swift */,
+				C2C36BB0265DBC7900ABB67E /* WeatherData.swift */,
 				C2EC2E722616D67B00136888 /* Fish Views */,
 				C2EC2E532616CF6000136888 /* ContentView.swift */,
 				C2EC2E612616D5C000136888 /* CameraView.swift */,
+				C20C30B5265A61110051771B /* Loading.swift */,
 				C2EC2E642616D5CE00136888 /* CollectionView.swift */,
 				C2EC2E672616D5DE00136888 /* WeatherView.swift */,
 				C2EC2E6A2616D5EC00136888 /* LawView.swift */,
@@ -286,24 +277,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2E037CD2644F7400091644A /* mapCentre.swift in Sources */,
 				C2B64F27262985CF00E1C17F /* HarbourView.swift in Sources */,
 				C2EC2E812616D6D700136888 /* BreamView.swift in Sources */,
 				C2B64F2A2629885A00E1C17F /* GymeaView.swift in Sources */,
 				C2B64F242629857B00E1C17F /* GordanView.swift in Sources */,
-				C266F2532643B221000C1778 /* VerifyData.swift in Sources */,
 				C2EC2E842616D6E600136888 /* SnapperView.swift in Sources */,
-				C2E037CA2644F3170091644A /* Location.swift in Sources */,
 				C2EC2E682616D5DE00136888 /* WeatherView.swift in Sources */,
 				C289D67C263544EC0083CF16 /* BrightonMapView.swift in Sources */,
 				C2B81B122619DF9200DD4EDC /* ImagePicker.swift in Sources */,
 				C289D68E263557A40083CF16 /* ParsleyMapView.swift in Sources */,
 				C2EC2E782616D6A300136888 /* FlounderView.swift in Sources */,
+				C20C30B6265A61110051771B /* Loading.swift in Sources */,
 				C2B64F2D2629889300E1C17F /* ParsleyView.swift in Sources */,
 				C289D684263557800083CF16 /* GordanMapView.swift in Sources */,
 				C2EC2E742616D69000136888 /* FlatheadView.swift in Sources */,
 				C2EC2E7E2616D6C400136888 /* TunaView.swift in Sources */,
 				C2EC2E622616D5C000136888 /* CameraView.swift in Sources */,
+				C2C36BB1265DBC7900ABB67E /* WeatherData.swift in Sources */,
 				C289D68B2635579A0083CF16 /* GymeaMapView.swift in Sources */,
 				C2EC2E542616CF6000136888 /* ContentView.swift in Sources */,
 				C2EC2E6B2616D5EC00136888 /* LawView.swift in Sources */,
@@ -312,8 +302,6 @@
 				C2EC2E522616CF6000136888 /* Fish_SpotApp.swift in Sources */,
 				C289D687263557890083CF16 /* HarbourMapView.swift in Sources */,
 				C2EC2E6E2616D5F900136888 /* FishingspotView.swift in Sources */,
-				C2E7EDD72644C436009366BE /* Name.swift in Sources */,
-				C2E7EDD026440B92009366BE /* BestLabel.swift in Sources */,
 				C2B64F1C262983BF00E1C17F /* BrightonView.swift in Sources */,
 				C2C7DD6B264A2D9300B5D233 /* jsonData.swift in Sources */,
 			);

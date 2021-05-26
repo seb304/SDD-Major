@@ -2,8 +2,7 @@
 
 import Foundation
 
-// MARK: - Welcome
-struct Welcome: Codable {
+struct XimilarData: Codable {
     let records: [Record]
     let version: Int
     let modelFormat, taskID: String
@@ -18,7 +17,6 @@ struct Welcome: Codable {
     }
 }
 
-// MARK: - Record
 struct Record: Codable {
     let bestLabel: BestLabel
 
@@ -27,13 +25,11 @@ struct Record: Codable {
     }
 }
 
-// MARK: - BestLabel
 struct BestLabel: Codable {
     let prob: Double
     let name, id: String
 }
 
-// MARK: - Statistics
 struct Statistics: Codable {
     let processingTime: Double
 
@@ -42,7 +38,6 @@ struct Statistics: Codable {
     }
 }
 
-// MARK: - Status
 struct Status: Codable {
     let code: Int
     let text, requestID, procID: String

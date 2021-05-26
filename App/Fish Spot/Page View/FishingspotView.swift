@@ -12,9 +12,11 @@ struct FishingspotView: View {
         ZStack { // arranges contents in the z-axis
             Image("background").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea()
             
+            Text("NSW Fishing Spots").font(.title).fontWeight(.bold).foregroundColor(Color.black).offset(y: -300)
+            
             VStack{
                 Spacer()
-                NavigationLink(destination: ParsleyView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                NavigationLink(destination: ParsleyMapView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                     ZStack{
                         Rectangle().fill(Color.white).opacity(0.7).cornerRadius(20).frame(width: 370, height: 80)
                         HStack{
@@ -34,7 +36,7 @@ struct FishingspotView: View {
                     }
                 }
                 
-                NavigationLink(destination: HarbourView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                NavigationLink(destination: HarbourMapView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                     ZStack{
                         Rectangle().fill(Color.white).opacity(0.7).cornerRadius(20).frame(width: 370, height: 80)
                         HStack{
@@ -54,7 +56,7 @@ struct FishingspotView: View {
                     }
                 }
                 
-                NavigationLink(destination: BrightonView().navigationBarHidden(true)){
+                NavigationLink(destination: BrightonMapView().navigationBarHidden(true)){
                     ZStack{
                         Rectangle().fill(Color.white).opacity(0.7).cornerRadius(20).frame(width: 370, height: 80)
                         HStack{
@@ -74,7 +76,7 @@ struct FishingspotView: View {
                     }
                 }
                 
-                NavigationLink(destination: GordanView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                NavigationLink(destination: GordanMapView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                     ZStack{
                         Rectangle().fill(Color.white).opacity(0.7).cornerRadius(20).frame(width: 370, height: 80)
                         HStack{
@@ -94,7 +96,7 @@ struct FishingspotView: View {
                     }
                 }
                 
-                NavigationLink(destination: GymeaView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                NavigationLink(destination: GymeaMapView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                     ZStack{
                         Rectangle().fill(Color.white).opacity(0.7).cornerRadius(20).frame(width: 370, height: 80)
                         HStack{
