@@ -164,22 +164,22 @@ struct CameraView: View {
                 }
             
                 if flathead {
-                    flatheadView()
+                    FlatheadView()
 
                 } else if flounder {
-                    flounderView()
+                    FlounderView()
  
                 } else if tuna {
-                    tunaView()
+                    TunaView()
                     
                 } else if kingfish {
-                    kingfishView()
+                    KingfishView()
                     
                 } else if snapper {
-                    snapperView()
+                    SnapperView()
                     
                 } else if bream {
-                    breamView()
+                    BreamView()
             
                 }
                 

@@ -16,14 +16,24 @@ struct FlatheadView: View {
                 
                 Spacer()
                 
-                Image("flathead").resizable().aspectRatio(contentMode: .fit).frame(width: 300, height: 140)
+                Image("flathead").resizable().aspectRatio(contentMode: .fit).frame(width: 300)
                 Spacer()
                 ZStack{
-                    Rectangle().fill(Color.white).cornerRadius(40).frame(width: 350, height: 350).opacity(0.7)
+                    Rectangle().fill(Color.white).cornerRadius(40).frame(width: 350, height: 325).opacity(0.7)
+                    
+                    VStack(spacing: 20){
+                        Text("Flathead").font(.title).fontWeight(.bold).foregroundColor(Color("homebutton")).multilineTextAlignment(.center).offset(y: -10)
+                        
+                        Text("Size Limit: 33cm").foregroundColor(Color("homebutton")).multilineTextAlignment(.leading).offset(x: -90)
+                        
+                        Text("Bag Limit: 10").foregroundColor(Color("homebutton")).multilineTextAlignment(.leading).offset(x: -105)
+                        
+                        Text("Info: Flathead vary from a sandy with brown spots to a dark brown with white spots. They are found in estuaries and costal bays in NSW and more commonly caught during the summer months.").foregroundColor(Color("homebutton")).frame(width: 310, height: 150).multilineTextAlignment(.leading)
+                    }
                 }
                 Spacer(minLength: 20)
                 ZStack{
-                    Rectangle().fill(Color.blue).cornerRadius(40).frame(height: 160).offset(y: 1).padding(.top).opacity(0.5)
+                    Rectangle().fill(Color.blue).cornerRadius(40).offset(y: 35).frame(height: 150).padding(.top).opacity(0.5).ignoresSafeArea()
                     VStack(spacing: 28){
                         
                         HStack(spacing: 10){
@@ -48,7 +58,6 @@ struct FlatheadView: View {
                             }
                             Spacer(minLength: 20)
                         }
-                        Text("ok").opacity(0).padding()
                     }
                 }
             }

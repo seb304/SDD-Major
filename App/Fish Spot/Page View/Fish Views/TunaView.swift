@@ -16,17 +16,27 @@ struct TunaView: View {
                 
                 Spacer()
                 
-                Image("tuna").resizable().aspectRatio(contentMode: .fit).frame(width: 300, height: 140).rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                Image("tuna").resizable().aspectRatio(contentMode: .fit).frame(width: 300).rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
                 
                 
                 Spacer()
                 ZStack{
-                    Rectangle().fill(Color.white).cornerRadius(40).frame(width: 350, height: 350).opacity(0.7)
+                    Rectangle().fill(Color.white).cornerRadius(40).frame(width: 350, height: 325).opacity(0.7)
+                    
+                    VStack(spacing: 20){
+                        Text("Tuna").font(.title).fontWeight(.bold).foregroundColor(Color("homebutton")).multilineTextAlignment(.center).offset(y: -10)
+                        
+                        Text("Size Limit: 90cm").foregroundColor(Color("homebutton")).multilineTextAlignment(.leading).offset(x: -90)
+                        
+                        Text("Bag Limit: 2").foregroundColor(Color("homebutton")).multilineTextAlignment(.leading).offset(x: -110)
+                        
+                        Text("Info: Tuna are found in Australia's southern waters along the east and west coast. They are distinguished by their large eyes and silver to dark blue colouring. They grow upto an length of 2.36 metres and a weight of 210kg.").foregroundColor(Color("homebutton")).frame(width: 310, height: 150).multilineTextAlignment(.leading)
+                    }
                 }
                 Spacer(minLength: 20)
                 ZStack{
-                    Rectangle().fill(Color.blue).cornerRadius(40).frame(height: 160).offset(y: 1).padding(.top).opacity(0.5)
-                    VStack(spacing: 28){
+                    Rectangle().fill(Color.blue).cornerRadius(40).offset(y: 35).frame(height: 150).padding(.top).opacity(0.5).ignoresSafeArea()
+                    VStack{
                         
                         HStack(spacing: 10){
                             Spacer()
@@ -50,7 +60,7 @@ struct TunaView: View {
                             }
                             Spacer(minLength: 20)
                         }
-                        Text("ok").opacity(0).padding()
+                        
                     }
                 }
             }

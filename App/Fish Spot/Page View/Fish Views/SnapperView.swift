@@ -16,14 +16,25 @@ struct SnapperView: View {
                 
                 Spacer()
                 
-                Image("snapper").resizable().aspectRatio(contentMode: .fit).frame(width: 300, height: 140)
+                Image("snapper").resizable().aspectRatio(contentMode: .fit).frame(width: 300)
                 Spacer()
+                Text("Ok").opacity(0)
                 ZStack{
-                    Rectangle().fill(Color.white).cornerRadius(40).frame(width: 350, height: 350).opacity(0.7)
+                    Rectangle().fill(Color.white).cornerRadius(40).frame(width: 350, height: 325).opacity(0.7)
+                    
+                    VStack(spacing: 20){
+                        Text("Snapper").font(.title).fontWeight(.bold).foregroundColor(Color("homebutton")).multilineTextAlignment(.center).offset(y: -10)
+                        
+                        Text("Size Limit: 30cm").foregroundColor(Color("homebutton")).multilineTextAlignment(.leading).offset(x: -100)
+                        
+                        Text("Bag Limit: 10").foregroundColor(Color("homebutton")).multilineTextAlignment(.leading).offset(x: -110)
+                        
+                        Text("Info: Snapper are commonly in coastal and offshore waters around NSW. They are identifiable by their pinkish silver to red colouring and large hump on their head. They can grow upto a maximum of 20kg and a length of over 1 metre.").foregroundColor(Color("homebutton")).frame(width: 310, height: 150).multilineTextAlignment(.leading)
+                    }
                 }
                 Spacer(minLength: 20)
                 ZStack{
-                    Rectangle().fill(Color.blue).cornerRadius(40).frame(height: 160).offset(y: 1).padding(.top).opacity(0.5)
+                    Rectangle().fill(Color.blue).cornerRadius(40).offset(y: 35).frame(height: 150).padding(.top).opacity(0.5).ignoresSafeArea()
                     VStack(spacing: 28){
                         
                         HStack(spacing: 10){
@@ -48,7 +59,6 @@ struct SnapperView: View {
                             }
                             Spacer(minLength: 20)
                         }
-                        Text("ok").opacity(0).padding()
                     }
                 }
             }
