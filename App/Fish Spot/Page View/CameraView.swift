@@ -30,6 +30,10 @@ struct CameraView: View {
     
     @State var showLoad = false // loading circle
     
+    @State private var NoImageAlert = false
+    
+    @State private var APIDown = false
+    
     var body: some View {
         
 
@@ -100,26 +104,33 @@ struct CameraView: View {
                                         do {
                                             
                                             let ximilar = try? JSONDecoder().decode(XimilarData.self, from: data)
-                                            let condition = ximilar!.records.first?.bestLabel.name // finds value of best_label and changes value based on that
-                                            if condition == "Flounder"{
-                                                flounder = true
-                                            } else if condition == "Flathead"{
-                                                flathead = true
-                                            } else if condition == "Yellowtail Kingfish"{
-                                                kingfish = true
-                                            } else if condition == "Snapper"{
-                                                snapper = true
-                                            } else if condition == "Bream"{
-                                                bream = true
-                                            } else if condition == "Tuna"{
-                                                tuna = true
+                                            let APIError = ximilar!.records.first?.status.code
+                                            
+                                            if APIError != 200 {
+                                                print("ok")
+                                            } else {
+                                                let condition = ximilar!.records.first?.bestLabel.name // finds value of best_label and changes value based on that
+                                                if condition == "Flounder"{
+                                                    flounder = true
+                                                } else if condition == "Flathead"{
+                                                    flathead = true
+                                                } else if condition == "Yellowtail Kingfish"{
+                                                    kingfish = true
+                                                } else if condition == "Snapper"{
+                                                    snapper = true
+                                                } else if condition == "Bream"{
+                                                    bream = true
+                                                } else if condition == "Tuna"{
+                                                    tuna = true
+                                                }
                                             }
                                         }
                                     }
                                
                            }.resume()
-                        } else {
-                            print("upload image")
+                        }
+                        if image == nil {
+                            NoImageAlert = true
                         }
                         
                     }.padding().offset(y: 70).foregroundColor(.white).background(Color("homebutton").opacity(0.6).cornerRadius(10.0).frame(width: 170).offset(y: 70))
@@ -186,6 +197,12 @@ struct CameraView: View {
             }
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType) // option to select camera or photo library
+        }
+        .alert(isPresented: $NoImageAlert) {
+                   Alert(title: Text("Error"), message: Text("Please upload an image"), dismissButton: .default(Text("OK")))
+        }
+        .alert(isPresented: $APIDown) {
+            Alert(title: Text("Service down"), message: Text("Verify is unavailable"), dismissButton: .default(Text("OK")))
         }
     }
 }

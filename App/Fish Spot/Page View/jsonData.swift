@@ -1,5 +1,4 @@
 
-
 import Foundation
 
 struct XimilarData: Codable {
@@ -18,16 +17,30 @@ struct XimilarData: Codable {
 }
 
 struct Record: Codable {
-    let bestLabel: BestLabel
+    let bestLabel: Label
+    let status: Status
 
     enum CodingKeys: String, CodingKey {
         case bestLabel = "best_label"
+        case status = "_status"
     }
 }
 
-struct BestLabel: Codable {
+struct Label: Codable {
     let prob: Double
     let name, id: String
+}
+
+struct Status: Codable {
+    let code: Int
+    let text, requestID: String
+    let procID: String?
+
+    enum CodingKeys: String, CodingKey {
+        case code, text
+        case requestID = "request_id"
+        case procID = "proc_id"
+    }
 }
 
 struct Statistics: Codable {
@@ -35,16 +48,5 @@ struct Statistics: Codable {
 
     enum CodingKeys: String, CodingKey {
         case processingTime = "processing time"
-    }
-}
-
-struct Status: Codable {
-    let code: Int
-    let text, requestID, procID: String
-
-    enum CodingKeys: String, CodingKey {
-        case code, text
-        case requestID = "request_id"
-        case procID = "proc_id"
     }
 }

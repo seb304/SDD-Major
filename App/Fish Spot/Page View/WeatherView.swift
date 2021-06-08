@@ -41,8 +41,8 @@ struct WeatherView: View {
                                     do {
                                         
                                         let weather = try? JSONDecoder().decode(WeatherData.self, from: data)
-                                        let response = weather!.datas.first?.temp
-                                        print(response as Any)
+                                        //let response = weather!.datas.first?.temp
+                                        //print(response as Any)
                                         let json = try JSONSerialization.jsonObject(with: data, options: [])
                                         print(json)
                                         

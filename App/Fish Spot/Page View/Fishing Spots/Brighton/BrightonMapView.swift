@@ -44,6 +44,33 @@ struct BrightonMapView: View {
                 ZStack{
                     Rectangle().fill(Color.white).cornerRadius(40).offset(y: 55).frame(height: 320)
                     
+                    VStack{
+                        Spacer()
+                        Text("Cook's River").font(.title2).fontWeight(.bold).foregroundColor(Color("homebutton")).multilineTextAlignment(.center).offset(y: 40)
+                        Text("Brighton-Le-Sands").font(.subheadline).fontWeight(.bold).foregroundColor(Color("homebutton")).multilineTextAlignment(.center).offset(y: 50)
+                        VStack{
+                            Text("Fish avaliable at Cook's River").font(.subheadline).fontWeight(.bold).foregroundColor(Color("homebutton")).multilineTextAlignment(.center).offset(y: 70)
+                            HStack{
+                                NavigationLink(destination: FlatheadView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                    ZStack{
+                                        Ellipse().fill(Color("homebutton")).frame(width: 130, height: 100).opacity(0.5).aspectRatio(contentMode: .fit).padding(.leading)
+                                        VStack{
+                                            Image("flathead").resizable().padding(.leading).aspectRatio(contentMode: .fit).frame(width: 100, height: 100).offset(x: 0, y: 15)
+                                        }
+                                    }
+                                }
+                                NavigationLink(destination: SnapperView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                    ZStack{
+                                        Ellipse().fill(Color("homebutton")).frame(width: 130, height: 110).opacity(0.5).aspectRatio(contentMode: .fit).padding(.leading)
+                                        VStack{
+                                            Image("snapper").resizable().padding(.leading).aspectRatio(contentMode: .fit).frame(width: 130, height: 110).offset(x: 0, y: 15)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
                     Image("Brighton").resizable().clipShape(Circle()).shadow(radius: 10).overlay(Circle().stroke(Color.blue, lineWidth: 2)).frame(width: 300, height: 200).offset(y: -90)
                 }
                 
