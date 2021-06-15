@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct Fish_SpotApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }

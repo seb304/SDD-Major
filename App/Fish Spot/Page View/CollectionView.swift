@@ -110,7 +110,7 @@ struct CollectionView: View {
                                 Image("collection").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top).offset(y: 14)
                                 Circle().fill(Color.green).frame(width: 20, height: 20).opacity(0.3).offset(y: 10)
                             }
-                            NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                            NavigationLink(destination: WeatherView(viewModel: WeatherModel(weatherServ: WeatherServ())).navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                 Image("weather").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                             }
                             NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){

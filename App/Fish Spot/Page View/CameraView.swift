@@ -107,7 +107,7 @@ struct CameraView: View {
                                             let APIError = ximilar!.records.first?.status.code
                                             
                                             if APIError != 200 {
-                                                print("ok")
+                                                APIDown = true
                                             } else {
                                                 let condition = ximilar!.records.first?.bestLabel.name // finds value of best_label and changes value based on that
                                                 if condition == "Flounder"{
@@ -156,7 +156,7 @@ struct CameraView: View {
                                 NavigationLink(destination: CollectionView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("collection").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
-                                NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                NavigationLink(destination: WeatherView(viewModel: WeatherModel(weatherServ: WeatherServ())).navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("weather").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
                                 NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
@@ -198,11 +198,11 @@ struct CameraView: View {
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType) // option to select camera or photo library
         }
-        .alert(isPresented: $NoImageAlert) {
-                   Alert(title: Text("Error"), message: Text("Please upload an image"), dismissButton: .default(Text("OK")))
-        }
         .alert(isPresented: $APIDown) {
             Alert(title: Text("Service down"), message: Text("Verify is unavailable"), dismissButton: .default(Text("OK")))
+        }
+        .alert(isPresented: $NoImageAlert) {
+                   Alert(title: Text("Error"), message: Text("Please upload an image"), dismissButton: .default(Text("OK")))
         }
     }
 }
@@ -250,7 +250,7 @@ struct breamView: View {
                                 NavigationLink(destination: CollectionView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("collection").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
-                                NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                NavigationLink(destination: WeatherView(viewModel: WeatherModel(weatherServ: WeatherServ())).navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("weather").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
                                 NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
@@ -300,7 +300,7 @@ struct flatheadView: View {
                                 NavigationLink(destination: CollectionView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("collection").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
-                                NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                NavigationLink(destination: WeatherView(viewModel: WeatherModel(weatherServ: WeatherServ())).navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("weather").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
                                 NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
@@ -349,7 +349,7 @@ struct flounderView: View {
                                 NavigationLink(destination: CollectionView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("collection").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
-                                NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                NavigationLink(destination: WeatherView(viewModel: WeatherModel(weatherServ: WeatherServ())).navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("weather").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
                                 NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
@@ -399,7 +399,7 @@ struct kingfishView: View {
                                 NavigationLink(destination: CollectionView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("collection").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
-                                NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                NavigationLink(destination: WeatherView(viewModel: WeatherModel(weatherServ: WeatherServ())).navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("weather").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
                                 NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
@@ -448,7 +448,7 @@ struct snapperView: View {
                                 NavigationLink(destination: CollectionView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("collection").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
-                                NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                NavigationLink(destination: WeatherView(viewModel: WeatherModel(weatherServ: WeatherServ())).navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("weather").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
                                 NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
@@ -497,7 +497,7 @@ struct tunaView: View {
                                 NavigationLink(destination: CollectionView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("collection").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
-                                NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                NavigationLink(destination: WeatherView(viewModel: WeatherModel(weatherServ: WeatherServ())).navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     Image("weather").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                 }
                                 NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){

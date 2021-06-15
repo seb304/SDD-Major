@@ -37,7 +37,7 @@ struct ContentView: View {
                                     }
                                 }
                             }
-                            NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                            NavigationLink(destination: WeatherView(viewModel: WeatherModel(weatherServ: WeatherServ())).navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                 ZStack{
                                     Rectangle().fill(Color("homebutton")).frame(width: 170, height: 70).opacity(0.8).cornerRadius(15).aspectRatio(contentMode: .fit).padding([.bottom, .trailing])
                                     HStack(spacing: 0){

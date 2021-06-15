@@ -53,15 +53,15 @@ struct BrightonMapView: View {
                             HStack{
                                 NavigationLink(destination: FlatheadView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     ZStack{
-                                        Ellipse().fill(Color("homebutton")).frame(width: 130, height: 100).opacity(0.5).aspectRatio(contentMode: .fit).padding(.leading)
+                                        Ellipse().fill(Color("homebutton")).frame(width: 130, height: 70).opacity(0.5).aspectRatio(contentMode: .fit).padding(.leading)
                                         VStack{
-                                            Image("flathead").resizable().padding(.leading).aspectRatio(contentMode: .fit).frame(width: 100, height: 100).offset(x: 0, y: 15)
+                                            Image("flathead").resizable().padding(.leading).aspectRatio(contentMode: .fit).frame(width: 130, height: 101).offset(x: 0, y: 15)
                                         }
                                     }
                                 }
                                 NavigationLink(destination: SnapperView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                     ZStack{
-                                        Ellipse().fill(Color("homebutton")).frame(width: 130, height: 110).opacity(0.5).aspectRatio(contentMode: .fit).padding(.leading)
+                                        Ellipse().fill(Color("homebutton")).frame(width: 130, height: 70).opacity(0.5).aspectRatio(contentMode: .fit).padding(.leading)
                                         VStack{
                                             Image("snapper").resizable().padding(.leading).aspectRatio(contentMode: .fit).frame(width: 130, height: 110).offset(x: 0, y: 15)
                                         }
@@ -93,7 +93,7 @@ struct BrightonMapView: View {
                                     NavigationLink(destination: CollectionView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                         Image("collection").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                     }
-                                    NavigationLink(destination: WeatherView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
+                                    NavigationLink(destination: WeatherView(viewModel: WeatherModel(weatherServ: WeatherServ())).navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                         Image("weather").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                                     }
                                     NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
