@@ -106,8 +106,10 @@ struct CameraView: View {
                                             let ximilar = try? JSONDecoder().decode(XimilarData.self, from: data)
                                             let APIError = ximilar!.records.first?.status.code
                                             
-                                            if APIError != 200 {
+                                            if APIError != 200 { // displays error if api is down
+                                                showLoad = false
                                                 APIDown = true
+                                                
                                             } else {
                                                 let condition = ximilar!.records.first?.bestLabel.name // finds value of best_label and changes value based on that
                                                 if condition == "Flounder"{

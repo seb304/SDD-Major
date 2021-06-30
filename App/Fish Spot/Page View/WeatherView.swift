@@ -19,21 +19,32 @@ struct WeatherView: View {
             
             VStack{
                 
-                VStack{
-                    Text(viewModel.cityName).font(.largeTitle).padding()
-                    Text(viewModel.temperature).font(.system(size: 70)).bold()
-                    Text(viewModel.weatherIcon).font(.largeTitle).padding()
-                    Text(viewModel.weatherDescription)
+                ZStack{
                     
-                    HStack{
-                        Text(viewModel.maxtemp)
-                        Text(viewModel.mintemp)
-                    }
+                    Rectangle().fill(Color.white).opacity(0.4).frame(width: 350, height: 450).cornerRadius(30)
                     
-                }.onAppear(perform: viewModel.reload)
+                    VStack{
+                        Spacer()
+                        Text(viewModel.cityName).font(.largeTitle).padding()
+                        Spacer()
+                        Text(viewModel.temperature).font(.system(size: 70)).bold()
+                        HStack{
+                            Text(viewModel.mintemp).bold()
+                            Text("|")
+                            Text(viewModel.maxtemp).bold()
+                        }
+                        Text(viewModel.weatherIcon).font(.largeTitle).padding()
+                        Text(viewModel.weatherDescription)
+                        Spacer()
+                        
+                        
+                    }.onAppear(perform: viewModel.reload)
+                }
+                
+                
                 
                 ZStack{
-                    Rectangle().fill(Color.blue).cornerRadius(40).frame(height: 160).offset(y: 1).padding(.top).opacity(0.5)
+                    Rectangle().fill(Color.blue).cornerRadius(40).offset(y: 35).frame(height: 150).padding(.top).opacity(0.5).ignoresSafeArea()
                     VStack(spacing: 28){
                         
                         HStack(spacing: 10){
@@ -47,8 +58,9 @@ struct WeatherView: View {
                             NavigationLink(destination: CollectionView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                 Image("collection").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
                             }
-                            NavigationLink(destination: WeatherView(viewModel: WeatherModel(weatherServ: WeatherServ())).navigationBarBackButtonHidden(true).navigationBarHidden(true)){
-                                Image("weather").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
+                            VStack{
+                                Image("weather").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top).offset(y: 14)
+                                Circle().fill(Color.green).frame(width: 20, height: 20).opacity(0.3).offset(y: 10)
                             }
                             NavigationLink(destination: LawView().navigationBarBackButtonHidden(true).navigationBarHidden(true)){
                                 Image("law").resizable().aspectRatio(contentMode: .fit).frame(width:50, height: 60).padding(.top)
@@ -58,7 +70,6 @@ struct WeatherView: View {
                             }
                             Spacer(minLength: 20)
                         }
-                        Text("ok").opacity(0).padding()
                     }
                 }
             }
