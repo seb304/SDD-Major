@@ -40,9 +40,20 @@ struct HarbourMapView: View {
                 Spacer()
 
                 ZStack{
-                    Rectangle().fill(Color.white).cornerRadius(40).offset(y: 55).frame(height: 320)
+                    Rectangle().fill(Color.white).cornerRadius(40).offset(y: 230).frame(height: 120)
                     
-                    Image("Harbour").resizable().clipShape(Circle()).shadow(radius: 10).overlay(Circle().stroke(Color.blue, lineWidth: 2)).frame(width: 300, height: 200).offset(y: -90)
+                    VStack{
+                        Spacer()
+                        Text("OK").opacity(0).padding()
+                        HStack(spacing: 10){
+                            Text("Beulah St Wharf").font(.title3).fontWeight(.bold).foregroundColor(Color("homebutton")).offset(y: 25)
+                            Text("|").font(.title).foregroundColor(Color("homebutton")).offset(y: 25)
+                            Text("Sydney Harbour").font(.subheadline).fontWeight(.bold).foregroundColor(Color("homebutton")).offset(y: 25)
+                        }
+                        
+                    }
+                    
+                    Image("Harbour").resizable().clipShape(Circle()).shadow(radius: 10).overlay(Circle().stroke(Color.blue, lineWidth: 2)).frame(width: 140, height: 140).offset(y: 150)
                 }
                 
 
