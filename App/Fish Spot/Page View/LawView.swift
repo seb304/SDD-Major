@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LawView: View {
+struct LawView: View { // interface items: buttons and layout
     var body: some View {
         
         ZStack{

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CollectionView: View {
+struct CollectionView: View { // interface items: buttons and layout
     var body: some View {
         ZStack{
             Image("background").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea()

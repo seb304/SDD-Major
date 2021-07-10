@@ -24,7 +24,7 @@ struct WeatherView: View {
                     Rectangle().fill(Color.white).opacity(0.4).frame(width: 350, height: 450).cornerRadius(30)
                     
                     VStack{
-                        Spacer()
+                        Spacer() // displays weather values from api
                         Text(viewModel.cityName).font(.largeTitle).padding()
                         Spacer()
                         Text(viewModel.temperature).font(.system(size: 70)).bold()

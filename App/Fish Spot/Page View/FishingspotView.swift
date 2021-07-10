@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FishingspotView: View {
+struct FishingspotView: View { // interface items: buttons and layout
     var body: some View {
         ZStack { // arranges contents in the z-axis
             Image("background").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea()

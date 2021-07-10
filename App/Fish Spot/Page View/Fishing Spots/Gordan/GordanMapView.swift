@@ -39,24 +39,23 @@ struct GordanMapView: View {
                 
                 Spacer()
 
+                
                 ZStack{
-                    Rectangle().fill(Color.white).cornerRadius(40).offset(y: 230).frame(height: 120)
+                    Rectangle().fill(Color.white).cornerRadius(40).frame(height: 120).offset(y: 70)
                     
                     VStack{
-                        Spacer()
+                      
                         Text("OK").opacity(0).padding()
                         HStack(spacing: 10){
-                            Text("Gordan's Bay").font(.title3).fontWeight(.bold).foregroundColor(Color("homebutton")).offset(y: 25)
-                            Text("|").font(.title).foregroundColor(Color("homebutton")).offset(y: 25)
-                            Text("Clovelly").font(.subheadline).fontWeight(.bold).foregroundColor(Color("homebutton")).offset(y: 25)
+                            Text("Gordan's Bay").font(.title3).fontWeight(.bold).foregroundColor(Color("homebutton")).offset(y: 50)
+                            Text("|").font(.title).foregroundColor(Color("homebutton")).offset(y: 50)
+                            Text("Clovelly").font(.subheadline).fontWeight(.bold).foregroundColor(Color("homebutton")).offset(y: 50)
                         }
                         
                     }
                     
-                    Image("Gordan").resizable().clipShape(Circle()).shadow(radius: 10).overlay(Circle().stroke(Color.blue, lineWidth: 2)).frame(width: 140, height: 140).offset(y: 150)
+                    Image("Gordan").resizable().clipShape(Circle()).shadow(radius: 10).overlay(Circle().stroke(Color.blue, lineWidth: 2)).frame(width: 140, height: 140).offset(y: -10)
                 }
-                
-
                     
                     ZStack{
                         

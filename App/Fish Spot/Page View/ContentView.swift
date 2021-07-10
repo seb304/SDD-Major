@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView: View { // Interface items: buttons and layout
     var body: some View {
         NavigationView{
             ZStack{
